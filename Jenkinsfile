@@ -12,6 +12,7 @@ node('ecs-infra-tools') {
         spinnaker_service_name.each { item ->
           sh """
           echo ${item}
+          packer --version
           """
         }
 }
