@@ -10,9 +10,9 @@ node('ecs-infra-tools') {
     checkout scm
       stage('packer_build') {
         spinnaker_service_name.each { item ->
-          sh '''
+          sh """
           echo ${item}
-          '''
+          """
         }
 }
 }
